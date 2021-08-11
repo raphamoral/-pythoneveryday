@@ -4,44 +4,45 @@
 ##comprar apenas galões de 3,6 litros;
 ##misturar latas e galões, de forma que o desperdício de tinta seja menor. Acrescente 10% de folga e sempre arredonde os valores para cima, isto é, considere latas cheias.
 import math
-squaremeters= float(input( "Digite o valor da área em metros quadrados a ser pintado:"))
-pricebiglat= 80.00
-pricesmalllat= 25.00
-lbiglat=18
-biglat=18
-lsmalllat=3.6
-smalllat=3.6
-llat=squaremeters/6
-print("total em litros : "+str(llat) + "l")
-llat1=llat*1.1
 
-if (llat==0):
-    pricefin4= 0
-    print("Preço inválido, recomece novamente")
-    
-if (llat > lbiglat) :
-    pricefin= (math.ceil(llat/lbiglat))*pricebiglat
+precolata= 80.00
+precogalao= 25.00
+litroslata=18
+
+litrosgaloes=3.6
+
+metrosquadradados= float(input("Digite o valor da área em metros quadrados a ser pintado:"))
+litrosparametros= metrosquadradados / 6
+print("total em litros : " + str(litrosparametros) + "l")
+litrosparametros11= litrosparametros * 1.1
+##if (litrosparametros=0):
+##    pricefin4= 0
+##    print("Preço inválido, recomece novamente")
+##    break
+
+if (litrosparametros > litroslata) :
+    precofinal1= (math.ceil(litrosparametros / litroslata)) * precolata
 else:
-    pricefin =pricebiglat
+    precofinal1 =precolata
 
-if (llat > lsmalllat):
-    pricefin2=(math.ceil(llat/smalllat))*pricesmalllat
+if (litrosparametros > litrosgaloes):
+    precofinal2= (math.ceil(litrosparametros / litrosgaloes)) * precogalao
 else :
-    pricefin2=pricesmalllat
+    precofinal2=precogalao
             
     
 
-tblat=(math.floor(llat1/biglat)) 
-resto =((llat1/biglat)-tblat)*biglat
+quantidadelatas =(math.floor(litrosparametros11 / litroslata))
+resto = ((litrosparametros11 / litroslata) - quantidadelatas) * litroslata
 if (resto < 10.8):
-    tg= math.ceil(resto/smalllat)
+    totalgaloes= math.ceil(resto / litrosgaloes)
 else :
-    tg=pricebiglat/pricesmalllat  
+    totalgaloes= precolata / precogalao
     
-mix= tg*pricesmalllat +pricebiglat*tblat
+mix= totalgaloes * precogalao + precolata * quantidadelatas
     
-print(" O valor para compra de somente de latas de 18 l é : R$" + str(pricefin))
-print ("O valor para compra de somente galões de 3.6 l é : R$" + str(pricefin2))
-print ("O valor para mistura de galões e latas com 10 por cento de acréscimo é : R$" +str(mix))  
+print(" O valor para compra de somente de latas de 18 l é : R$" + str(precofinal1))
+print ("O valor para compra de somente galões de 3.6 l é : R$" + str(precofinal2))
+print ("O valor para mistura de galões e latas com 10 por cento de acréscimo é : R$" +str(mix))
                
         
