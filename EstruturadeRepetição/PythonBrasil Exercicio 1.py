@@ -12,3 +12,5 @@ while True:
             break
         else:
             print('O número deve estar entre 0 e 10')
+
+print("alo")

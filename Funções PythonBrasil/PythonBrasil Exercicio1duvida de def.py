@@ -1,5 +1,5 @@
 numero = int(input("Digite um numero"))
-def clareza():
+def imprimir_triangulo_de_numeros():
     lista = [numero]
     lista2 = lista * numero
     for r in lista2:

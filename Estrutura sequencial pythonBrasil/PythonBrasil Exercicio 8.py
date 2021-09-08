@@ -9,5 +9,6 @@ minutdec= c/60
 
 d= a*(minutdec+b)
 print (" O valor mensal que você recebe é " + str(d))
+print(f'O valor mensal que voce recebe é {d}')
    
 

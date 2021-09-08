@@ -13,10 +13,7 @@ litroslata=18
 
 litrosgaloes=3.6
 
-metrosquadradados= float(input("Digite o valor da área em metros quadrados a ser pintado:"))
-litrosparametros= metrosquadradados / 6
-print("total em litros : " + str(litrosparametros) + " L")
-litrosparametros11= litrosparametros * 1.1
+
 #while true :
     #litrosparametros<=0 :
     #if litrosparametros >0:
@@ -26,12 +23,14 @@ litrosparametros11= litrosparametros * 1.1
 ##    pricefin4= 0
 ##    print("Preço inválido, recomece novamente")
 ##    break
-
+litrosparametros11=0
 while litrosparametros11<=0:
-    print("Digite um número válido da proxima vez")
-    if litrosparametros11>0:
-
-        break
+    metrosquadradados = float(input("Digite o valor da área em metros quadrados a ser pintado:"))
+    litrosparametros = metrosquadradados / 6
+    print("total em litros : " + str(litrosparametros) + " L")
+    litrosparametros11 = litrosparametros * 1.1
+    if litrosparametros11<=0:
+        print("Digite um número válido da proxima vez")
 
 
 if (litrosparametros > litroslata) :
