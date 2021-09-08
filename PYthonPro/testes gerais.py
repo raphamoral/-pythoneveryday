@@ -3,4 +3,4 @@ class dict:
     print(linguas)
 
 
-    
+    ######
